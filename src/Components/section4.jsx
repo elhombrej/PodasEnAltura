@@ -21,14 +21,6 @@ export function Section4() {
             Béccar, Boulogne, Munro, Villa Adelina y Alrededores
           </Typography>
           <br />
-          <Typography
-            sx={{
-              typography: "body",
-            }}
-          >
-            EL MAPACHE - Poda de Arboles en Altura en Todo Zona Norte de Bs. As.
-          </Typography>
-          <br />
 
           <Typography
             sx={{

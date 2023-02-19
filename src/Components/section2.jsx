@@ -1,9 +1,8 @@
-import { Grid, Box } from "@mui/material";
+import { Grid, Box , Typography } from "@mui/material";
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -60,48 +59,6 @@ export function Section2() {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item sm={6} xs={12}>
-          <Typography
-            sx={{
-              typography: "h5",
-            }}
-            fontWeight="bold"
-          >
-            EL MAPACHE ofrece variados servicios:
-          </Typography>
-          <br />
-          <ul>
-            <li>
-              <Typography variant="h6">Mantenimiento de Parques</Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">Poda de Arboles Altos</Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">Podas de Todo Tipo</Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">
-                Extracciones y Tala de Arboles
-              </Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">Poda de Palmeras</Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">Hogar e Industria</Typography>
-            </li>
-
-            <li>
-              <Typography variant="h6">Trabajos Grandes y Pequeños</Typography>
-            </li>
-          </ul>
-        </Grid>
 
         <Grid item sm={6} xs={12}>
           <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
@@ -145,6 +102,50 @@ export function Section2() {
             </AutoPlaySwipeableViews>
           </Box>
         </Grid>
+
+        <Grid item sm={6} xs={12}>
+          <Typography
+            sx={{
+              typography: "h5",
+            }}
+            fontWeight="bold"
+          >
+            EL MAPACHE ofrece variados servicios:
+          </Typography>
+          <br />
+          <ul>
+            <li>
+              <Typography variant="h6">Mantenimiento de Parques</Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">Poda de Arboles Altos</Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">Podas de Todo Tipo</Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">
+                Extracciones y Tala de Arboles
+              </Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">Poda de Palmeras</Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">Hogar e Industria</Typography>
+            </li>
+
+            <li>
+              <Typography variant="h6">Trabajos Grandes y Pequeños</Typography>
+            </li>
+          </ul>
+        </Grid>
+
       </Grid>
     </Paper>
   );

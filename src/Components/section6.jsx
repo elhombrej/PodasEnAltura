@@ -10,7 +10,7 @@ export function Section6() {
         justifyContent="space-around"
         alignItems="center"
       >
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h6" fontWeight="bold">
             EL MAPACHE - Poda de Arboles en Altura en Todo Zona Norte de Bs. As.
           </Typography>
@@ -32,11 +32,11 @@ export function Section6() {
           </Typography>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <img
             src="../images/cards.png"
             alt="image"
-            style={{ height: "50%", width: "50%" }}
+            style={{ height: "100%", width: "100%" }}
           />
         </Grid>
       </Grid>

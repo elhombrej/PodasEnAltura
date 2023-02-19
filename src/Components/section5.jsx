@@ -1,20 +1,25 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import CallIcon from '@mui/icons-material/Call';
+import CallIcon from "@mui/icons-material/Call";
 
 export function Section5() {
-
-
   return (
     <Paper elevation={0}>
       <Grid
         container
-        direction="column"
+        direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={5}
       >
+        <Grid item sm={6} xs={12}>
+          <img
+            src="../images/img6.jpg"
+            alt="image"
+            style={{ height: "100%", width: "100%" }}
+          />
+        </Grid>
+
         <Grid item sm={6} xs={12}>
           <Typography
             sx={{
@@ -22,11 +27,9 @@ export function Section5() {
             }}
             fontWeight="bold"
           >
-            LLÁME O ENVÍE UN WHATSAPP 
+            LLÁME O ENVÍE UN WHATSAPP
           </Typography>
-        </Grid>
 
-        <Grid item>
           <Button
             size="large"
             variant="contained"
@@ -35,9 +38,7 @@ export function Section5() {
           >
             Llamar
           </Button>
-        </Grid>
 
-        <Grid item>
           <Button
             size="large"
             variant="contained"
@@ -47,11 +48,6 @@ export function Section5() {
           >
             Enviar WhatsApp
           </Button>
-        </Grid>
-
-
-        <Grid item sm={6} xs={12}>
-          <img src="../images/img6.jpg" alt="image" />
         </Grid>
       </Grid>
     </Paper>
