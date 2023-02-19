@@ -20,7 +20,7 @@ export function Home() {
         <Grid
           container
           direction="column"
-          justifyContent="center"
+          justifyContent="space-between"
           alignItems="center"
           spacing={6}
         >
