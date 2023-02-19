@@ -1,7 +1,6 @@
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -15,7 +14,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: "iimg1",
+    label: "img1",
     imgPath: "../images/img1.jpg",
   },
   {

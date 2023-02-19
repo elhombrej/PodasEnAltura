@@ -47,7 +47,6 @@ function App() {
       <ThemeProvider 
       theme={darkModeTheme}
       >
-
         <Routes>
           <Route path='/' element={<Home mode={mode} setMode={setMode} />} />
         </Routes>

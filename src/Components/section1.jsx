@@ -34,7 +34,7 @@ export function Section1() {
         </Grid>
 
         <Grid item sm={6} xs={12}>
-          <img src="../images/img6.jpg" alt="image" />
+          <img src="../public/images/img6.jpg" alt="image" />
         </Grid>
       </Grid>
     </Paper>
