@@ -17,7 +17,7 @@ function App() {
       ...(mode === "dark" && {
         primary: {
           main: "#7986cb",
-          background: "#eeeeee"
+          background: "#eeeeee",
         },
         secondary: {
           main: "#f50057",
@@ -30,12 +30,13 @@ function App() {
         secondary: {
           main: "#f50057",
         },
+
       }),
     },
     typography:{
       // responsiveFontSizes(darkModeTheme)
-      fontFamily: ['arial'],
-      fontWeight: ['bold']
+      fontFamily: ['sans-serif'],
+      fontWeight: ['bold'],
     },
 
   });

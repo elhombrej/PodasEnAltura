@@ -1,11 +1,11 @@
 import { Button, Grid, Paper, Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
-import Bounce from "react-reveal/Bounce";
 import { styled } from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
+import CallIcon from "@mui/icons-material/Call";
+import Tada from "react-reveal/Tada";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -47,7 +47,7 @@ const Image = styled("span")(({ theme }) => ({
   flexDirection: "column",
   display: "flex",
   alignItems: "center",
-  justifyContent: "flex-start",
+  justifyContent: "space-evenly",
   color: theme.palette.common.white,
   margin: 20,
 }));
@@ -82,8 +82,15 @@ export function Section0a({ mode, setMode }) {
   };
 
   return (
-      <Zoom>
-        <Grid item>
+    <Grid
+      container
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      spacing={3}
+    >
+      <Grid item>
+        <Slide top>
           <Box
             sx={{
               width: "100vw",
@@ -110,13 +117,11 @@ export function Section0a({ mode, setMode }) {
                     width: { xs: "60%", sm: "30%" },
                   }}
                 >
-                  <Zoom>
-                    <img
-                      src="../images/img0.jpg"
-                      alt="mapacheLogo"
-                      style={{ height: "100%", width: "100%" }}
-                    />
-                  </Zoom>
+                  <img
+                    src="../images/img0.jpg"
+                    alt="mapacheLogo"
+                    style={{ height: "100%", width: "100%" }}
+                  />
                 </Box>
 
                 <Typography
@@ -133,6 +138,7 @@ export function Section0a({ mode, setMode }) {
                   EL MAPACHE
                   <ImageMarked className="MuiImageMarked-root" />
                 </Typography>
+
                 <Slide top cascade>
                   <Typography
                     sx={{
@@ -142,100 +148,125 @@ export function Section0a({ mode, setMode }) {
                   >
                     Poda de arboles en altura
                   </Typography>
+
+                  <Typography
+                    sx={{
+                      typography: { xs: "body" },
+                    }}
+                    fontWeight="bold"
+                  >
+                    En toda zona Norte Bs. As.
+                  </Typography>
                 </Slide>
-                <Typography
-                  sx={{
-                    typography: { xs: "body" },
-                  }}
-                  fontWeight="bold"
-                >
-                  En toda zona Norte Bs. As.
-                </Typography>
               </Image>
             </ImageButton>
           </Box>
-        </Grid>
+        </Slide>
+      </Grid>
 
+      <Grid item>
         <Grid
           container
-          direction="column"
-          justifyContent="center"
+          direction="row"
+          justifyContent="space-evenly"
           alignItems="center"
-          spacing={3}
+          spacing={5}
         >
           <Grid item>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-            >
-              <Grid item xs={12} sm={4}>
-                <ul>
-                  <li>
-                    <Typography variant="h6">
-                      Servicio de Podas en Altura
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">
-                      Extracción y Tala de Arboles
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">Personal Asegurado</Typography>
-                  </li>
-                </ul>
-              </Grid>
-
-              <Grid item xs={12} sm={4}>
-                <ul>
-                  <li>
-                    <Typography variant="h6">Poda en General</Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">
-                      Presupuesto a Domicilio SIN CARGO
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">Trabajos de riesgo</Typography>
-                  </li>
-                </ul>
-              </Grid>
-
-              <Grid item xs={12} sm={4}>
-                <ul>
-                  <li>
-                    <Typography variant="h6">Hogar y Comercial</Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">Precios Accesibles</Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h6">
-                      Trabajos Rápidos y Prolijos
-                    </Typography>
-                  </li>
-                </ul>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Bounce>
+            <Tada>
               <Button
                 size="large"
                 variant="contained"
-                color="success"
+                startIcon={<CallIcon />}
+                href="tel:1169066196"
+              >
+                Llamar
+              </Button>
+            </Tada>
+          </Grid>
+
+          <Grid item>
+            <Tada>
+              <Button
+                size="large"
+                variant="contained"
+                sx={{
+                  backgroundColor: "#4caf50",
+                }}
                 startIcon={<WhatsAppIcon />}
                 href="https://api.whatsapp.com/send?phone=+5491169066196&text=Hola%20Salvador,%20Me%20comunico%20porque%20visite%20la%20página%20web%20de%20El%20Mapache%20-%20Podas"
               >
-                Enviar WhatsApp
+                WhatsApp
               </Button>
-            </Bounce>
+            </Tada>
           </Grid>
         </Grid>
-      </Zoom>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="h6">(Teléfono: 1169066196)</Typography>
+      </Grid>
+
+      <Grid item>
+        <Slide bottom>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={1}
+          >
+            <Grid item xs={12} sm={4}>
+              <ul>
+                <li>
+                  <Typography variant="h6">
+                    Servicio de Podas en Altura
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">
+                    Extracción y Tala de Arboles
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">Personal Asegurado</Typography>
+                </li>
+              </ul>
+            </Grid>
+
+            <Grid item xs={12} sm={4}>
+              <ul>
+                <li>
+                  <Typography variant="h6">Poda en General</Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">
+                    Presupuesto a Domicilio SIN CARGO
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">Trabajos de riesgo</Typography>
+                </li>
+              </ul>
+            </Grid>
+
+            <Grid item xs={12} sm={4}>
+              <ul>
+                <li>
+                  <Typography variant="h6">Hogar y Comercial</Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">Precios Accesibles</Typography>
+                </li>
+                <li>
+                  <Typography variant="h6">
+                    Trabajos Rápidos y Prolijos
+                  </Typography>
+                </li>
+              </ul>
+            </Grid>
+          </Grid>
+        </Slide>
+      </Grid>
+    </Grid>
   );
 }

@@ -3,15 +3,20 @@ import React from "react";
 
 export function Section6() {
   return (
+    <Paper variant='outlined'>
+
       <Grid
         container
         direction="row"
         justifyContent="space-around"
         alignItems="center"
       >
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={4} margin="3%">
           <Typography variant="h6" fontWeight="bold">
-            EL MAPACHE - Poda de Arboles en Altura en Todo Zona Norte de Bs. As.
+            EL MAPACHE
+          </Typography>
+          <Typography variant="h6" fontWeight="bold">
+          Poda de Arboles en Altura
           </Typography>
           <br />
           <Typography
@@ -31,7 +36,7 @@ export function Section6() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={4} margin="3%">
           <img
             src="../images/cards.png"
             alt="image"
@@ -39,5 +44,7 @@ export function Section6() {
           />
         </Grid>
       </Grid>
+      </Paper>
+
   );
 }
