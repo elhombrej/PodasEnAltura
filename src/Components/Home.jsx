@@ -1,5 +1,5 @@
 import { Button, Grid, Paper, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Hom } from "./Hom";
 import { Section1 } from "./section1";
 import { Section2 } from "./section2";
@@ -11,9 +11,15 @@ import { Section7 } from "./section7";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 
-export function Home() {
+export function Home({ mode, setMode }) {
   return (
-    <Paper elevation={0}>
+    <Paper
+      sx={{
+        minHeight: "70vh",
+        minWidth: "70vw",
+      }}
+      xs={12}
+    >
       <Zoom>
         <Grid
           container
@@ -24,9 +30,8 @@ export function Home() {
           }}
           spacing={3}
         >
-
           <Grid item>
-            <Section0a />
+            <Section0a mode={mode} setMode={setMode} />
           </Grid>
 
           <Grid item>

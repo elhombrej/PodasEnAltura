@@ -1,5 +1,5 @@
 import { Button, Grid, Paper, Typography, Box } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
@@ -14,18 +14,18 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
     width: "100% !important", // Overrides inline-style
     height: 100,
   },
-  "&:hover, &.Mui-focusVisible": {
-    zIndex: 1,
-    "& .MuiImageBackdrop-root": {
-      opacity: 0.15,
-    },
-    "& .MuiImageMarked-root": {
-      opacity: 0,
-    },
-    "& .MuiTypography-root": {
-      border: "4px solid currentColor",
-    },
-  },
+  //   "&:hover, &.Mui-focusVisible": {
+  //     zIndex: 1,
+  //     "& .MuiImageBackdrop-root": {
+  //       opacity: 0.15,
+  //     },
+  //     "& .MuiImageMarked-root": {
+  //       opacity: 0,
+  //     },
+  //     "& .MuiTypography-root": {
+  //       border: "4px solid currentColor",
+  //     },
+  //   },
 }));
 
 const ImageSrc = styled("span")({
@@ -73,7 +73,14 @@ const ImageMarked = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity"),
 }));
 
-export function Section0a() {
+export function Section0a({ mode, setMode }) {
+  const [checked, setChecked] = useState(true);
+
+  const handleChange = (event) => {
+    setChecked(!checked);
+    setMode(mode === "light" ? "dark" : "light");
+  };
+
   return (
     <Paper elevation={0}>
       <Zoom>
@@ -89,7 +96,10 @@ export function Section0a() {
               style={{
                 width: "100%",
                 height: "100%",
+                cursor: "auto",
               }}
+              checked={checked}
+              onClick={handleChange}
             >
               <ImageSrc
                 style={{ backgroundImage: `url(${"/images/imgA.jpg"})` }}
@@ -154,7 +164,6 @@ export function Section0a() {
           alignItems="center"
           spacing={3}
         >
-
           <Grid item>
             <Grid
               container

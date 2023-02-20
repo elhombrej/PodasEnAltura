@@ -78,6 +78,7 @@ export function Hom() {
             >
               {phrases.map((step, index) => (
                 <Paper
+                key={phrases.label}
                 elevation={0}
                   sx={{
                     display: "flex",
