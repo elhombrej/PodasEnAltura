@@ -1,11 +1,10 @@
-import { Button, Grid, Paper, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
 
 export function Section5() {
   return (
-    <Paper elevation={0}>
       <Grid
         container
         sx={{
@@ -95,6 +94,5 @@ export function Section5() {
           />
         </Grid>
       </Grid>
-    </Paper>
   );
 }

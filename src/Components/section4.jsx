@@ -3,7 +3,6 @@ import React from "react";
 
 export function Section4() {
   return (
-    <Paper elevation={0}>
       <Grid
         container
         sx={{
@@ -64,6 +63,5 @@ export function Section4() {
           />
         </Grid>
       </Grid>
-    </Paper>
   );
 }

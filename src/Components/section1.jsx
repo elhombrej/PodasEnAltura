@@ -1,18 +1,17 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 
 export function Section1() {
   return (
-    <Paper elevation={0}>
-      <Grid
-        container
-        sx={{
-          direction: { sm: "row", xs: "column" },
-        }}
-        justifyContent="space-evenly"
-        alignItems="center"
-      >
-        <Grid item md={4} sm={5} xs={12}>
+    <Grid
+      container
+      sx={{
+        direction: { sm: "row", xs: "column" },
+      }}
+      justifyContent="space-evenly"
+      alignItems="center"
+    >
+      <Grid item md={4} sm={5} xs={12}>
           <Typography
             sx={{
               typography: "h5",
@@ -33,20 +32,19 @@ export function Section1() {
             calificados para proveer servicios en hogares y comercios en Todo
             Zona Norte de Bs. As.
           </Typography>
-        </Grid>
-
-        <Grid item md={4} sm={5} xs={12}>
-          <img
-            src="../images/img6.jpg"
-            alt="image"
-            style={{
-              height: "100%",
-              width: "100%",
-              borderRadius: "50px 50px 5px 50px",
-            }}
-          />
-        </Grid>
       </Grid>
-    </Paper>
+
+      <Grid item md={4} sm={5} xs={12}>
+        <img
+          src="../images/img6.jpg"
+          alt="image"
+          style={{
+            height: "100%",
+            width: "100%",
+            borderRadius: "50px 50px 5px 50px",
+          }}
+        />
+      </Grid>
+    </Grid>
   );
 }

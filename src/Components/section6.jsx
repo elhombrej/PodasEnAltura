@@ -3,7 +3,6 @@ import React from "react";
 
 export function Section6() {
   return (
-    <Paper elevation={0}>
       <Grid
         container
         direction="row"
@@ -40,6 +39,5 @@ export function Section6() {
           />
         </Grid>
       </Grid>
-    </Paper>
   );
 }

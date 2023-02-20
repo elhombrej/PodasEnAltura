@@ -46,7 +46,6 @@ export function Hom() {
   };
 
   return (
-    <Paper elevation={0}>
       <Grid
         container
         direction="column"
@@ -77,7 +76,7 @@ export function Hom() {
               enableMouseEvents
             >
               {phrases.map((step, index) => (
-                <Paper
+                <Box
                 key={phrases.label}
                 elevation={0}
                   sx={{
@@ -91,12 +90,11 @@ export function Hom() {
                       {phrases[activeStep].label}
                     </Typography>
                   ) : null}
-                </Paper>
+                </Box>
               ))}
             </AutoPlaySwipeableViews>
           </Box>
         </Grid>
       </Grid>
-    </Paper>
   );
 }

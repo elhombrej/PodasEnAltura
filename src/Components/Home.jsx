@@ -13,13 +13,7 @@ import Slide from "react-reveal/Slide";
 
 export function Home({ mode, setMode }) {
   return (
-    <Paper
-      sx={{
-        minHeight: "70vh",
-        minWidth: "70vw",
-      }}
-      xs={12}
-    >
+    <Paper>
       <Zoom>
         <Grid
           container
@@ -57,6 +51,7 @@ export function Home({ mode, setMode }) {
               <Section5 />
             </Slide>
           </Grid>
+
           <Grid item>
             <Hom />
           </Grid>

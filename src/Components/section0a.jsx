@@ -82,7 +82,6 @@ export function Section0a({ mode, setMode }) {
   };
 
   return (
-    <Paper elevation={0}>
       <Zoom>
         <Grid item>
           <Box
@@ -238,6 +237,5 @@ export function Section0a({ mode, setMode }) {
           </Grid>
         </Grid>
       </Zoom>
-    </Paper>
   );
 }

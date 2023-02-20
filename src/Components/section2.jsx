@@ -48,7 +48,6 @@ export function Section2() {
   };
 
   return (
-    <Paper elevation={0}>
       <Grid
         container
         direction="row"
@@ -177,6 +176,5 @@ export function Section2() {
           </Box>
         </Grid>
       </Grid>
-    </Paper>
   );
 }
