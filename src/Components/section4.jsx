@@ -6,14 +6,16 @@ export function Section4() {
     <Paper elevation={0}>
       <Grid
         container
-        direction="row"
-        justifyContent="center"
+        sx={{
+          direction: { sm: "row", xs: "column" },
+        }}
+        justifyContent="space-evenly"
         alignItems="center"
       >
-        <Grid item sm={6} xs={12}>
+        <Grid item md={4} sm={5} xs={12}>
           <Typography
             sx={{
-              typography: "h6",
+              typography: "h5",
             }}
             fontWeight="bold"
           >
@@ -38,17 +40,6 @@ export function Section4() {
             }}
           >
             En EL MAPACHE estamos a la espera para ayudarlo con su necesidad.
-            Hasta que no resolvamos su problema, no descansaremos!
-          </Typography>
-          <br />
-
-          <Typography
-            sx={{
-              typography: "body",
-            }}
-          >
-            En EL MAPACHE estamos a la espera para ayudarlo con su necesidad.
-            Hasta que no resolvamos su problema, no descansaremos!
           </Typography>
           <br />
 
@@ -61,12 +52,16 @@ export function Section4() {
           </Typography>
         </Grid>
 
-        <Grid item sm={6} xs={12}>
-          <Typography variant="h5" fontWeight="bold">
-            Podadores Profesionales
-          </Typography>
-
-          <img src="../images/img5.jpg" alt="image" />
+        <Grid item md={4} sm={5} xs={12}>
+          <img
+            src="../images/img5.jpg"
+            alt="image"
+            style={{
+              height: "100%",
+              width: "100%",
+              borderRadius: "50px 50px 5px 50px",
+            }}
+          />
         </Grid>
       </Grid>
     </Paper>

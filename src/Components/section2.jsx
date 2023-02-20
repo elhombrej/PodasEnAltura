@@ -1,4 +1,4 @@
-import { Grid, Box , Typography } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
@@ -56,25 +56,17 @@ export function Section2() {
       <Grid
         container
         direction="row"
-        justifyContent="center"
+        justifyContent="space-evenly"
         alignItems="center"
       >
-
-        <Grid item sm={6} xs={12}>
+        <Grid
+          item
+          md={4}
+          sm={5}
+          xs={12}
+          sx={{ display: { sm: "block", xs: "none" } }}
+        >
           <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-            {/* <Paper
-              square
-              elevation={0}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                height: 50,
-                pl: 2,
-                bgcolor: "background.default",
-              }}
-            >
-              <Typography>{images[activeStep].label}</Typography>
-            </Paper> */}
             <AutoPlaySwipeableViews
               axis={theme.direction === "rtl" ? "x-reverse" : "x"}
               index={activeStep}
@@ -87,11 +79,13 @@ export function Section2() {
                     <Box
                       component="img"
                       sx={{
-                        height: 350,
-                        display: "block",
-                        maxWidth: 250,
+                        height: "100%",
+                        maxWidth: "100%",
                         overflow: "hidden",
                         width: "100%",
+                      }}
+                      style={{
+                        borderRadius: "50px 50px 50px 50px",
                       }}
                       src={step.imgPath}
                       alt={step.label}
@@ -103,7 +97,7 @@ export function Section2() {
           </Box>
         </Grid>
 
-        <Grid item sm={6} xs={12}>
+        <Grid item md={4} sm={5} xs={12}>
           <Typography
             sx={{
               typography: "h5",
@@ -146,6 +140,46 @@ export function Section2() {
           </ul>
         </Grid>
 
+        <Grid
+          item
+          md={4}
+          sm={5}
+          xs={12}
+          sx={{ display: { sm: "none", xs: "block" } }}
+          width="100vw"
+        >
+          <Box maxHeight="100vh" minHeight="100vh" display="static">
+            <AutoPlaySwipeableViews
+              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={activeStep}
+              onChangeIndex={handleStepChange}
+              enableMouseEvents
+            >
+              {images.map((step, index) => (
+                <div key={step.label}>
+                  {Math.abs(activeStep - index) <= 2 ? (
+                    <img
+                      sx={{
+                        minHeight: "100vh",
+                        maxHeight: "100vh",
+                        display: "block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        width: "100vw",
+                      }}
+                      style={{
+                        borderRadius: "50px 50px 50px 50px",
+                        width: "95%",
+                      }}
+                      src={step.imgPath}
+                      alt={step.label}
+                    />
+                  ) : null}
+                </div>
+              ))}
+            </AutoPlaySwipeableViews>
+          </Box>
+        </Grid>
       </Grid>
     </Paper>
   );

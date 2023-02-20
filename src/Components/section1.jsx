@@ -6,11 +6,13 @@ export function Section1() {
     <Paper elevation={0}>
       <Grid
         container
-        direction="row"
-        justifyContent="center"
+        sx={{
+          direction: { sm: "row", xs: "column" },
+        }}
+        justifyContent="space-evenly"
         alignItems="center"
       >
-        <Grid item sm={6} xs={12}>
+        <Grid item md={4} sm={5} xs={12}>
           <Typography
             sx={{
               typography: "h5",
@@ -33,8 +35,16 @@ export function Section1() {
           </Typography>
         </Grid>
 
-        <Grid item sm={6} xs={12}>
-          <img src="../images/img6.jpg" alt="image" />
+        <Grid item md={4} sm={5} xs={12}>
+          <img
+            src="../images/img6.jpg"
+            alt="image"
+            style={{
+              height: "100%",
+              width: "100%",
+              borderRadius: "50px 50px 5px 50px",
+            }}
+          />
         </Grid>
       </Grid>
     </Paper>

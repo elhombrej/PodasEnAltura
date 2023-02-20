@@ -3,6 +3,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import { autoPlay } from "react-swipeable-views-utils";
 import SwipeableViews from "react-swipeable-views";
+import Zoom from "react-reveal/Zoom";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -36,7 +37,7 @@ const phrases = [
   },
 ];
 
-export function Section3() {
+export function Hom() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -50,16 +51,34 @@ export function Section3() {
         container
         direction="column"
         justifyContent="center"
-        alignItems="center"
+        alignItems="flex-start"
       >
-        <Grid item xs={12}>
+        <Grid item xs={6} md={12} >
+          <Zoom>
+            <img
+              src="../images/img0.jpg"
+              alt="image"
+              style={{ height: "100%", width: "100%" }}
+            />
+          </Zoom>
+        </Grid>
+
+        <Grid item xs={12} md={10}>
           <Typography variant="h5" fontWeight="bold">
-            ¿Porque elegir EL MAPACHE? Es simple.
+            ¿Porque elegir EL MAPACHE?
           </Typography>
         </Grid>
 
-        <Grid item sm={6} xs={12}>
-          <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+        <Grid item xs={12} md={10}>
+          <Box
+            maxHeight="20px%"
+            minHeight="20px"
+            sx={{
+              maxWidth: "100vw",
+              minWidth: "100vw",
+              flexGrow: 1,
+            }}
+          >
             <AutoPlaySwipeableViews
               axis={theme.direction === "rtl" ? "x-reverse" : "x"}
               index={activeStep}
@@ -67,25 +86,20 @@ export function Section3() {
               enableMouseEvents
             >
               {phrases.map((step, index) => (
-                <div key={step.label}>
+                <Paper
+                elevation={0}
+                  sx={{
+                    display: "flex",
+                    maxHeight: "70px",
+                    minHeight: "70px",
+                  }}
+                >
                   {Math.abs(activeStep - index) <= 2 ? (
-                    <Paper
-                      square
-                      elevation={0}
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        height: 50,
-                        pl: 2,
-                        bgcolor: "background.default",
-                      }}
-                    >
-                      <Typography variant="h5">
-                        {phrases[activeStep].label}
-                      </Typography>
-                    </Paper>
+                    <Typography variant="h5">
+                      {phrases[activeStep].label}
+                    </Typography>
                   ) : null}
-                </div>
+                </Paper>
               ))}
             </AutoPlaySwipeableViews>
           </Box>
