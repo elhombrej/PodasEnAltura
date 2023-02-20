@@ -22,11 +22,8 @@ export function Home() {
           sx={{
             alignItems: { sm: "center", xs: "flex-start" },
           }}
-          spacing={6}
+          spacing={3}
         >
-          <Grid item xs={12}>
-            <Hom />
-          </Grid>
 
           <Grid item>
             <Section0a />
@@ -54,6 +51,9 @@ export function Home() {
             <Slide right>
               <Section5 />
             </Slide>
+          </Grid>
+          <Grid item>
+            <Hom />
           </Grid>
 
           <Grid item>

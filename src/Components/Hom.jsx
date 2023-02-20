@@ -53,15 +53,6 @@ export function Hom() {
         justifyContent="center"
         alignItems="flex-start"
       >
-        <Grid item xs={6} md={12} >
-          <Zoom>
-            <img
-              src="../images/img0.jpg"
-              alt="image"
-              style={{ height: "100%", width: "100%" }}
-            />
-          </Zoom>
-        </Grid>
 
         <Grid item xs={12} md={10}>
           <Typography variant="h5" fontWeight="bold">
