@@ -12,7 +12,7 @@ export function Section1() {
       justifyContent="space-evenly"
       alignItems="center"
     >
-      <Grid item md={4} sm={5} xs={12} margin="5%">
+      <Grid item md={4} sm={5} xs={12} sx={{ margin: { xs: "5%", sm: 0 } }}>
         <Typography
           sx={{
             typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" },
@@ -78,8 +78,10 @@ export function Section1() {
               style={{
                 height: "100vh",
                 width: "90%",
-                margin: "5%",
                 boxShadow: "10px 10px",
+                margin:'5%',
+                borderRadius: "50px 0px",
+
               }}
               sx={{
                 left: "50%",

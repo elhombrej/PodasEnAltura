@@ -130,8 +130,10 @@ export function Section5() {
               style={{
                 height: "100vh",
                 width: "90%",
-                margin: "5%",
                 boxShadow: "10px 10px",
+                margin:'5%',
+                borderRadius: "50px 00px 0px 0px",
+
               }}
             />
           </Zoom>

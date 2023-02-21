@@ -74,7 +74,6 @@ export function Hom() {
           maxHeight="20px%"
           minHeight="20px"
           sx={{
-            maxWidth: "100vw",
             minWidth: "100vw",
             flexGrow: 1,
           }}

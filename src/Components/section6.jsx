@@ -1,9 +1,12 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
+import Zoom from "react-reveal/Zoom";
 
 export function Section6() {
   return (
-    <Paper variant='outlined'>
+<Zoom bottom>
+
+<Paper variant='outlined'>
 
       <Grid
         container
@@ -11,7 +14,7 @@ export function Section6() {
         justifyContent="space-around"
         alignItems="center"
       >
-        <Grid item xs={12} sm={4} margin="3%">
+        <Grid item xs={12} sm={6} >
           <Typography variant="h6" fontWeight="bold">
             EL MAPACHE
           </Typography>
@@ -36,7 +39,7 @@ export function Section6() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} sm={4} margin="3%">
+        <Grid item xs={12} sm={6} >
           <img
             src="../images/cards.png"
             alt="image"
@@ -45,6 +48,7 @@ export function Section6() {
         </Grid>
       </Grid>
       </Paper>
+      </Zoom>
 
   );
 }

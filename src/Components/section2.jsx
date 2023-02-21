@@ -72,7 +72,6 @@ export function Section2() {
                       sx={{
                         height: 400,
                         display: "block",
-                        width: 450,
                         overflow: "hidden",
                         width: "100%",
                       }}
@@ -165,6 +164,8 @@ export function Section2() {
                         height: "100vh",
                         width: "90%",
                         margin: "5%",
+                        borderRadius: "50px 0px",
+
                       }}
                       src={step.imgPath}
                       alt={step.label}

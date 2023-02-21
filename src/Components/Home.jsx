@@ -12,7 +12,14 @@ import Slide from "react-reveal/Slide";
 
 export function Home({ mode, setMode }) {
   return (
-    <Paper>
+    <Paper
+      sx={{
+        minHeight: "100vh",
+        // minWidth: '100vw',
+        overflow:'clip'
+      }}
+      xs={12}
+    >
       <Grid
         container
         direction="column"
@@ -48,18 +55,12 @@ export function Home({ mode, setMode }) {
           </Slide>
         </Grid>
 
-        {/* <Grid item>
-          <Hom />
-        </Grid> */}
-
         <Grid item>
-          <Slide bottom>
-            <Section6 />
-          </Slide>
+          <Section6 />
         </Grid>
 
         <Grid item>
-            <Section7 />
+          <Section7 />
         </Grid>
       </Grid>
     </Paper>
