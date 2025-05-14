@@ -82,6 +82,22 @@ export function Section0a({ mode, setMode }) {
   };
 
   return (
+    <>
+      <Grid
+        item
+        xs={12}
+        style={{ backgroundColor: "gray", width: "100%", textAlign: "center" }}
+      >
+        <Typography
+          fontFamily="monospace"
+          sx={{ fontSize: { xs: "9px", sm: "15px" } }}
+        >
+          Desarrolle su sitio web con{" "}
+          <a href="https://padronsistemas.vercel.app">
+            padronsistemas.vercel.app
+          </a>
+        </Typography>
+      </Grid>
       <Grid
         container
         direction="column"
@@ -178,7 +194,7 @@ export function Section0a({ mode, setMode }) {
                   size="large"
                   variant="contained"
                   startIcon={<CallIcon />}
-                  href="tel:1169066196"
+                  href="tel:1154917621"
                 >
                   Llamar
                 </Button>
@@ -194,7 +210,7 @@ export function Section0a({ mode, setMode }) {
                     backgroundColor: "#4caf50",
                   }}
                   startIcon={<WhatsAppIcon />}
-                  href="https://api.whatsapp.com/send?phone=+5491169066196&text=Hola%20Salvador,%20Me%20comunico%20porque%20visite%20la%20página%20web%20de%20El%20Mapache%20-%20Podas"
+                  href="https://api.whatsapp.com/send?phone=+5491154917621&text=Hola%20Salvador,%20Me%20comunico%20porque%20visite%20la%20página%20web%20de%20El%20Mapache%20-%20Podas"
                 >
                   WhatsApp
                 </Button>
@@ -203,7 +219,7 @@ export function Section0a({ mode, setMode }) {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="h6">(Teléfono: 1169066196)</Typography>
+          <Typography variant="h6">(Teléfono: 1154917621)</Typography>
         </Grid>
 
         <Grid item sx={{ display: { sm: "block", xs: "none" } }}>
@@ -268,5 +284,6 @@ export function Section0a({ mode, setMode }) {
           </Slide>
         </Grid>
       </Grid>
+    </>
   );
 }

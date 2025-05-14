@@ -66,7 +66,7 @@ export function Section5() {
               size="large"
               variant="contained"
               startIcon={<CallIcon />}
-              href="tel:1169066196"
+              href="tel:1154917621"
             >
               Llamar
             </Button>
@@ -80,7 +80,7 @@ export function Section5() {
                 backgroundColor: "#4caf50",
               }}
               startIcon={<WhatsAppIcon />}
-              href="https://api.whatsapp.com/send?phone=+5491169066196&text=Hola%20Salvador,%20Me%20comunico%20porque%20visite%20la%20página%20web%20de%20El%20Mapache%20-%20Podas"
+              href="https://api.whatsapp.com/send?phone=+5491154917621&text=Hola%20Salvador,%20Me%20comunico%20porque%20visite%20la%20página%20web%20de%20El%20Mapache%20-%20Podas"
             >
               WhatsApp
             </Button>
@@ -131,9 +131,8 @@ export function Section5() {
                 height: "100vh",
                 width: "90%",
                 boxShadow: "10px 10px",
-                margin:'5%',
+                margin: "5%",
                 borderRadius: "50px 00px 0px 0px",
-
               }}
             />
           </Zoom>
