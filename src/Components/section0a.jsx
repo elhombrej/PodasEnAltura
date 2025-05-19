@@ -93,8 +93,8 @@ export function Section0a({ mode, setMode }) {
           sx={{ fontSize: { xs: "9px", sm: "15px" } }}
         >
           Desarrolle su sitio web con{" "}
-          <a href="https://padronsistemas.vercel.app">
-            padronsistemas.vercel.app
+          <a href="https://padronsistemas.com">
+            padronsistemas.com
           </a>
         </Typography>
       </Grid>
