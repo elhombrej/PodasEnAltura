@@ -84,27 +84,29 @@ export function Section0a({ mode, setMode }) {
   return (
     <>
       <Grid
-        item
-        xs={12}
-        style={{ backgroundColor: "gray", width: "100%", textAlign: "center" }}
-      >
-        <Typography
-          fontFamily="monospace"
-          sx={{ fontSize: { xs: "9px", sm: "15px" } }}
-        >
-          Desarrolle su sitio web con{" "}
-          <a href="https://padronsistemas.com">
-            padronsistemas.com
-          </a>
-        </Typography>
-      </Grid>
-      <Grid
         container
         direction="column"
         justifyContent="center"
         alignItems="center"
         spacing={3}
       >
+        <Grid
+          item
+          xs={12}
+          style={{
+            backgroundColor: "gray",
+            width: "100%",
+            textAlign: "center",
+          }}
+        >
+          <Typography
+            fontFamily="monospace"
+            sx={{ fontSize: { xs: "9px", sm: "15px" } }}
+          >
+            Desarrolle su sitio web con{" "}
+            <a href="https://padronsistemas.com">padronsistemas.com</a>
+          </Typography>
+        </Grid>
         <Grid item>
           <Slide top>
             <Box
